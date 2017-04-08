@@ -22,9 +22,9 @@ module.exports = {
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
   output: {
-    publicPath: '/',
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    publicPath: '/dist',
+    path: path.join(__dirname, '/'),
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -33,7 +33,7 @@ module.exports = {
     loaders
   },
   devServer: {
-    contentBase: "./public",
+    contentBase: "./dist",
     // do not print bundle build stats
     noInfo: true,
     // enable HMR
@@ -57,7 +57,7 @@ module.exports = {
       template: './src/template.html',
       files: {
         css: ['style.css'],
-        js: [ "bundle.js"],
+        js: [ "app.min.js"],
       }
     }),
   ]

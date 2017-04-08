@@ -1,0 +1,11 @@
+body {
+  background: #ece7e7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.redBg {
+  background-color: red;
+  border-radius: 51px;
+  color: white;
+  padding: 5px;
+}

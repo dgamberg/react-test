@@ -12,14 +12,17 @@ loaders.push({
 });
 
 module.exports = {
-  entry: [
-    './src/index.jsx',
-    './styles/index.scss'
-  ],
+  entry: {
+    app: './src/index.jsx',
+    app2: [
+      './src/index.jsx',
+      './styles/index.scss'
+    ]
+  },
   output: {
     publicPath: './',		
-    path: path.join(__dirname, 'public'),
-    filename: '[chunkhash].js'
+    path: path.join(__dirname, 'dist'),
+    filename: '[name]_[hash].js'
   },
   resolve: {
     extensions: ['.js', '.jsx']
